@@ -21,7 +21,7 @@ class Profile(models.Model):
 
     def __str__(self):
         return str(self.name.username)
-class Ratings(models.Model):
+class Rating(models.Model):
     design = models.IntegerField(blank=True)
     usability = models.IntegerField(blank=True)
     content = models.IntegerField(blank=True)
