@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rateApp',
     'bootstrap5',
     'rest_framework',
+    'accounts',
 ]
 
 MIDDLEWARE = [

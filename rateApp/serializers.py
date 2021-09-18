@@ -5,4 +5,6 @@ class ProjectSerializer(serializers.ModelSerializer):
     #create a meta class to define model
     class Meta:
         model = Project
-        fields = '_all_'
+        fields = ('project_name','project_owner','project_link','description','date_added')
+
+    
