@@ -12,3 +12,7 @@ class ProjectViewset(viewsets.ModelViewSet):
     ]
     
     serializer_class = ProjectSerializer
+    
+    #method to return project of specific user
+    
+    #submit project based on owner
