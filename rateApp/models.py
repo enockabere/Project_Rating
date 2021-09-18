@@ -8,7 +8,7 @@ User = get_user_model()
 
 class Project(models.Model):
     project_name = models.CharField(max_length=15,blank=True)
-    project_owner = models.ForeignKey(User, default=None,on_delete=models.CASCADE,related_name='project_owner')
+    project_owner = models.ForeignKey(User,on_delete=models.CASCADE,related_name='project_owner')
     project_link = models.URLField(blank=True,max_length=200)
     description = models.TextField(blank=True)
     date_added = models.DateTimeField(auto_now_add=True)
@@ -17,7 +17,7 @@ class Project(models.Model):
         return str(self.project_name)
 class Profile(models.Model):
     name = models.OneToOneField(User, on_delete=models.CASCADE, blank=True,related_name='profile_user')
-    projects = models.ForeignKey(Project,on_delete=models.CASCADE,default=None,related_name='projects')
+    projects = models.ForeignKey(Project,on_delete=models.CASCADE,related_name='projects')
     profile_pic = models.ImageField(blank=True)
     bio = models.TextField(blank=True)
     contact = models.CharField(max_length=15)
