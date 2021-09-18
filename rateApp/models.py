@@ -12,4 +12,12 @@ class Profile(models.Model):
 
     def __str__(self):
         return str(self.name.username)
-
+class Ratings(models.Model):
+    design = models.IntegerField(blank=True,max_length=2)
+    usability = models.IntegerField(blank=True,max_length=2)
+    content = models.IntegerField(blank=True,max_length=2)
+    date = models.DateTimeField(auto_now_add=True)
+    rated_by = models.ForeignKey(User,on_delete=models.CASCADE,related_name='rater')
+    
+    def __str__(self):
+        return str(self.rated_by.username)
