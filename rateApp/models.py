@@ -3,6 +3,15 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+class Project(models.Model):
+    project_name = models.CharField(max_length=15,blank=True)
+    project_owner = models.ForeignKey(User,on_delete=models.CASCADE,related_name='project_owner')
+    project_link = models.URLField(blank=True,max_length=200)
+    description = models.TextField(blank=True)
+    date_added = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return str(self.project_name)
 class Profile(models.Model):
     name = models.OneToOneField(User, on_delete=models.CASCADE, blank=True,related_name='profile_user')
     projects = models.ForeignKey(Project,on_delete=models.CASCADE,related_name='projects')
@@ -13,10 +22,11 @@ class Profile(models.Model):
     def __str__(self):
         return str(self.name.username)
 class Ratings(models.Model):
-    design = models.IntegerField(blank=True,max_length=2)
-    usability = models.IntegerField(blank=True,max_length=2)
-    content = models.IntegerField(blank=True,max_length=2)
+    design = models.IntegerField(blank=True)
+    usability = models.IntegerField(blank=True)
+    content = models.IntegerField(blank=True)
     date = models.DateTimeField(auto_now_add=True)
+    project = models.ForeignKey(Project,on_delete=models.CASCADE,related_name="project_rated")
     rated_by = models.ForeignKey(User,on_delete=models.CASCADE,related_name='rater')
     
     def __str__(self):
