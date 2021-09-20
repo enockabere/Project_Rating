@@ -12,7 +12,7 @@ def register_request(request):
             user = form.save()
             login(request, user)
             messages.success(request,'Registration Successful')
-            return redirect('main:login')
+            return redirect('login')
         messages.error(request, 'Unsuccessful registration. Invalid information')
     form = NewUserForm()
     return render(request=request, template_name='main/register.html',context={'register_form':form})
@@ -26,7 +26,7 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, f'You are now logged in as {username}.')
-                return redirect('rateApp:dashboard')
+                return redirect('dashboard')
             else:
                 messages.error(request, 'Invalid username or password')
         else:
