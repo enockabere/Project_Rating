@@ -1,0 +1,41 @@
+.navbar{
+    background-color: transparent;
+}
+.navbar-brand{
+    color: white;
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+.br {
+    color: #F1B24A;
+    padding-left: 10px;
+  }
+  .navbar-toggler{
+      background-color: #F1B24A;
+      color: black;
+  }
+.nav-item a{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+.nav-item a:hover{
+    color:#F1B24A;
+}
+.con{
+    color: #F1B24A;
+    text-align: right;
+}
+#active{
+    color: #3C1874;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+#gits{
+    border-color: #3C1874;
+}
+#gits:hover{
+    border-color: #3C1874;
+    background-color: #3C1874;
+}

@@ -22,11 +22,12 @@ class RegisterSerializer(serializers.ModelSerializer):
 #login serializer
 class LoginSerializer(serializers.Serializer):
     username = serializers.CharField()
-    password=serializers.CharField()
+    password = serializers.CharField()
     
     def validate(self,attrs):
-       user = authenticate(**attrs)
        
+       user = authenticate(**attrs)
+       print(user)
        #check if user authenticated
        if user and user.is_active:
            return user

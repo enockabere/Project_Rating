@@ -1,3 +1,126 @@
 .br{
     color:#fa5530;
 }
+.landing{
+    background-image: url(../images/rates/bg/2.jpg)
+}
+.brand {
+    padding-top: 30px;
+  }
+  
+  .brand h3 {
+    color: white;
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+  }
+   
+  .description {
+    margin-top: 100px
+  }
+  
+  .description h3 {
+    color: white;
+    /* font-family: 'Domine', serif; */
+    font-size: 55px;
+    text-align: center;
+    font-weight: 800;
+  }
+  
+  .description p {
+    color: white;
+    text-align: center;
+  }
+  
+  #cards {
+    padding-top: 30px;
+  }
+  
+  #myCard {
+    background-color: transparent;
+    border: 1px solid white;
+  }
+  
+  #myCard:hover {
+    background-color: transparent;
+    border: 1px solid #F1B24A;
+  }
+  
+  .card-title {
+    text-align: center;
+    font-size: 25px;
+    color: #F1B24A;
+    opacity: 0.7;
+  }
+  
+  .card-title:hover {
+    opacity: 1;
+  }
+  
+  .card-text {
+    text-align: center;
+    color: white;
+  }
+  
+  #searchs {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  
+  #user {
+    background-color: black;
+    border: 1px solid #F1B24A;
+    color: white;
+    font-family: fantasy;
+    padding: 15px;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  #user:hover {
+    background-color: #F1B24A;
+    border: 1px solid #F1B24A;
+    color: black;
+  }
+  
+  #repo {
+    background-color: #DADED4;
+    border: 1px solid #F1B24A;
+    color: black;
+    padding: 15px;
+    font-family: fantasy;
+    display: inline-block;
+    margin-left: 5px;
+  }
+  
+  #repo:hover {
+    background-color: black;
+    border: 1px solid #F1B24A;
+    color: white;
+  }
+  
+  .imgs img {
+    width: 3%;
+  }
+  
+  .cont h4 {
+    color: white;
+    text-align: right;
+  }
+  
+  .con {
+    color: #F1B24A;
+    text-align: right;
+  }
+  
+  .cont a {
+    margin-left: 91%;
+  }
+  
+  .last {
+    padding-top: 20px;
+  }
+  
+  /*responsive*/
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    
+  }
