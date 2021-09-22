@@ -87,4 +87,58 @@
         </div>
     </div>
 </section>
+<section class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="start">
+                    <div class="header">
+                        <h5>
+                            About <span class="br">Project</span>
+                        </h5>
+                    </div>
+                    <div class="header-body">
+                        <p>
+                            Any marketing that uses electronic devices to convey promotional
+                             messaging and measure its impact. In practice, digital marketing
+                             typically refers to marketing campaigns that appear on a computer,
+                              phone, tablet, or other device. It can take many forms, including 
+                              online video, display ads, and social media posts. Digital marketing 
+                              is often compared to “traditional marketing” such as magazine ads,
+                               billboards, and direct mail. Oddly, television is usually lumped in
+                                with traditional marketing. 
+                        </p>
+                       
+                    </div>
+                </div>
+               <div class="btns">
+                <button id="ratesBtn" class="btn btn-outline-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Rate Project
+                  </button>
+               </div>
+                <div class="collapse" id="collapseExample">
+                    <form>
+                        <div class="mb-3">
+                          <label for="design" class="form-label">Design Rating</label>
+                          <input type="number" class="form-control" name="design" placeholder="Enter rating between 1-10">
+                          <div class="form-text">Rate project by entering a number between 1 and 10 where 10 is highest and 1 is lowest</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="usability" class="form-label" >Usability Rating</label>
+                          <input type="number" class="form-control" placeholder="Enter rating between 1-10" name="usability">
+                          <div class="form-text">Rate project by entering a number between 1 and 10 where 10 is highest and 1 is lowest</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="content" class="form-label">Content Rating</label>
+                            <input type="number" class="form-control" name="content" placeholder="Enter rating between 1-10">
+                            <div  class="form-text">Rate project by entering a number between 1 and 10 where 10 is highest and 1 is lowest</div>
+                          </div>
+                        <button type="submit" class="btn btn-info mb-3">Submit</button>
+                      </form>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

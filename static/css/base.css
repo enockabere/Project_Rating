@@ -190,3 +190,16 @@
   font-weight: bold;
   color: #fa5530;
 }
+.about{
+  margin-top: 30px;
+  background-color: #F0F3F4 ;
+}
+.header h5{
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  padding-bottom: 30px;
+}
+#ratesBtn{
+  margin-bottom: 20px;
+}
