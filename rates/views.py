@@ -5,3 +5,6 @@ from django.contrib.auth.decorators import login_required
 @login_required(login_url='accounts/login/')
 def dashboard(request):
     return render(request,'main/dashboard.html')
+@login_required(login_url='accounts/login/')
+def ratings(request):
+    return render(request,'main/rate.html')

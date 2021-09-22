@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% load static %}
+{% block content %}
+<section class="landings">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="brand">
+                    <h3>Hypertext <span class="br"> Assassin</span></h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="description">
+                    <h3>See Rates For this Site Below!</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="cards">
+            <div class="col-md-3 d-flex pb-3">
+                <div class="card" id="myCard">
+                    <div class="card-body">
+                        <h5 class="card-title"><span class="material-icons-outlined">
+                                Design
+                            </span></h5>
+                        <p class="card-text">
+                            Good web design helps guide your users' eyes and tell
+                            them where you want
+                            them to look.
+                        </p>
+                        <div class="icos">
+                            <p>98%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex pb-3">
+                <div class="card" id="myCard">
+                    <div class="card-body">
+                        <h5 class="card-title"><span class="material-icons-outlined">
+                                Usability
+                            </span></h5>
+                        <p class="card-text">
+                            This can be translated to the user experience and how responsive the project is.
+                        </p>
+                        <div class="icos">
+                            <p>98%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex pb-3">
+                <div class="card" id="myCard">
+                    <div class="card-body">
+                        <h5 class="card-title"><span class="material-icons-outlined">
+                                Content
+                            </span></h5>
+                        <p class="card-text">
+                            This includes the technologies used, the font used and
+                            grammar
+                        </p>
+                        <div class="icos" style="padding-top:20px;">
+                            <p>98%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex pb-3">
+                <div class="card" id="myCard">
+                    <div class="card-body">
+                        <h5 class="card-title"><span class="material-icons-outlined">
+                                Criteria
+                            </span></h5>
+                        <p class="card-text">
+                            Project rating and reviews are a digital version of the word-of-mouth phenomenon.
+                            A project can be rated based on , Design, Usability and Content.
+
+                        </p>
+                        <div class="ico">
+                            <img src="../../../static/images/rates/4.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

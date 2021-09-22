@@ -15,11 +15,6 @@
             <div class="col-md-12">
                 <div class="description">
                     <h3>Let's Rate Your Web Application Here!</h3>
-                    <!-- <p>
-                        
-                        88% of consumers trust reviews 
-                        as much as recommendations from their friends and peers.
-                    </p> -->
                 </div>
             </div>
         </div>
@@ -27,7 +22,7 @@
             <div class="col-md-12 col-xs-12 col-sm-12 text-center">
                 <div id="searches" class="btn-group" role="group" aria-label="Basic example">
                     <button class="btn btn-success" id="user" routerLink="/profile">Find/View/Rate Projects </button>
-                    <button id="repo" class="btn btn-success" routerLink="/repos">Upload a Project</button>
+                    <button id="repo" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Upload a Project</button>
                 </div>
             </div>
         </div>
@@ -102,13 +97,93 @@
 <section class="last">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-               
+            <div class="col-md-4">
+                <div class="coupon">
+                    <div class="mylogo">
+                      <h3>Company Logo</h3>
+                    </div>
+                    <img src="../../../static/images/rates/5.png" alt="Avatar" style="width:100%;">
+                    <div class="mylogo" style="background-color:white">
+                      <h2><b>20% OFF YOUR PURCHASE</b></h2> 
+                      <p>Lorem ipsum dolor sit amet, et nam pertinax gloriatur. Sea te minim soleat senserit, ex quo luptatum tacimates voluptatum, salutandi delicatissimi eam ea. In sed nullam laboramus appellantur, mei ei omnis dolorem mnesarchum.</p>
+                    </div>
+                    <div class="mylogo">
+                      <p class="expire">Published: Jan 03, 2021</p>
+                    </div>
+                  </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="coupon">
+                    <div class="mylogo">
+                      <h3>Company Logo</h3>
+                    </div>
+                    <img src="../../../static/images/rates/5.png" alt="Avatar" style="width:100%;">
+                    <div class="mylogo" style="background-color:white">
+                      <h2><b>20% OFF YOUR PURCHASE</b></h2> 
+                      <p>Lorem ipsum dolor sit amet, et nam pertinax gloriatur. Sea te minim soleat senserit, ex quo luptatum tacimates voluptatum, salutandi delicatissimi eam ea. In sed nullam laboramus appellantur, mei ei omnis dolorem mnesarchum.</p>
+                    </div>
+                    <div class="mylogo">
+                      <p class="expire">Published: Jan 03, 2021</p>
+                    </div>
+                  </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="coupon">
+                    <div class="mylogo">
+                      <h3>Company Logo</h3>
+                    </div>
+                    <img src="../../../static/images/rates/5.png" alt="Avatar" style="width:100%;">
+                    <div class="mylogo" style="background-color:white">
+                      <h2><b>20% OFF YOUR PURCHASE</b></h2> 
+                      <p>Lorem ipsum dolor sit amet, et nam pertinax gloriatur. Sea te minim soleat senserit, ex quo luptatum tacimates voluptatum, salutandi delicatissimi eam ea. In sed nullam laboramus appellantur, mei ei omnis dolorem mnesarchum.</p>
+                    </div>
+                    <div class="mylogo">
+                      <p class="expire">Published: Jan 03, 2021</p>
+                    </div>
+                  </div> 
             </div>
         </div>
     </div>
 </section>
-<script>
+<section>
 
-</script>
+<!-- modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="email1">Email address</label>
+                    <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">Your information is safe with us.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="password1">Password</label>
+                    <input type="password" class="form-control" id="password1" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <label for="password1">Confirm Password</label>
+                    <input type="password" class="form-control" id="password2" placeholder="Confirm Password">
+                  </div>
+                </div>
+                <div class="modal-footer border-top-0 d-flex justify-content-center">
+                  <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}
+

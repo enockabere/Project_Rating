@@ -1,135 +1,192 @@
-*{
-    margin: 0;
-    padding: 0;
-  }
-.br{
-    color:#fa5530;
+* {
+  margin: 0;
+  padding: 0;
 }
-.landing{
-    background-image: url(../images/rates/bg/2.jpg)
+
+.br {
+  color: #fa5530;
+}
+
+.landing {
+  height: 100vh;
+  background-image: url(../images/rates/bg/2.jpg)
+}
+.landings {
+  height: 80vh;
+  background-image: url(../images/rates/bg/2.jpg)
 }
 .brand {
-    padding-top: 30px;
-  }
-  
-  .brand h3 {
-    color: white;
-    font-family: 'Acme', sans-serif;
-    font-size: 30px;
-  }
-   
-  .description {
-    margin-top: 100px
-  }
-  
-  .description h3 {
-    color: white;
-    /* font-family: 'Domine', serif; */
-    font-size: 55px;
-    text-align: center;
-    font-weight: 800;
-  }
-  
-  .description p {
-    color: white;
-    text-align: center;
-  }
-  
-  #cards {
-    padding-top: 30px;
-  }
-  
-  #myCard {
-    background-color: transparent;
-    border: 1px solid white;
-  }
-  
-  #myCard:hover {
-    background-color: transparent;
-    border: 1px solid #F1B24A;
-  }
-  
-  .card-title {
-    text-align: center;
-    font-size: 25px;
-    color: #F1B24A;
-    opacity: 0.7;
-  }
-  
-  .card-title:hover {
-    opacity: 1;
-  }
-  
-  .card-text {
-    text-align: center;
-    color: white;
-  }
-  
-  #searchs {
-    padding-top: 30px;
-    padding-bottom: 40px;
-  }
-  
-  #user {
-    background-color: black;
-    border: 1px solid #F1B24A;
-    color: white;
-    font-family: fantasy;
-    padding: 15px;
-    display: inline-block;
-    margin-right: 5px;
-  }
-  
-  #user:hover {
-    background-color: #F1B24A;
-    border: 1px solid #F1B24A;
-    color: black;
-  }
-  
-  #repo {
-    background-color: #DADED4;
-    border: 1px solid #F1B24A;
-    color: black;
-    padding: 15px;
-    font-family: fantasy;
-    display: inline-block;
-    margin-left: 5px;
-  }
-  
-  #repo:hover {
-    background-color: black;
-    border: 1px solid #F1B24A;
-    color: white;
-  }
-  
-  .imgs img {
-    width: 3%;
-  }
-  
-  .cont h4 {
-    color: white;
-    text-align: right;
-  }
-  
-  .con {
-    color: #F1B24A;
-    text-align: right;
-  }
-  
-  .cont a {
-    margin-left: 91%;
-  }
-  
-  .last {
-    padding-top: 20px;
-  }
-  
-  /*responsive*/
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    
-  }
-  .ico img {
-      width: 80px;
-      margin-left: 32%;
-      border-radius:50%;
-  }
+  padding-top: 30px;
+}
+
+.brand h3 {
+  color: white;
+  font-family: 'Acme', sans-serif;
+  font-size: 30px;
+}
+
+.description {
+  margin-top: 100px
+}
+
+.description h3 {
+  color: white;
+  /* font-family: 'Domine', serif; */
+  font-size: 55px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.description p {
+  color: white;
+  text-align: center;
+}
+
+#cards {
+  padding-top: 30px;
+}
+
+#myCard {
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+#myCard:hover {
+  background-color: transparent;
+  border: 1px solid #F1B24A;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 25px;
+  color: #F1B24A;
+  opacity: 0.7;
+}
+
+.card-title:hover {
+  opacity: 1;
+}
+
+.card-text {
+  text-align: center;
+  color: white;
+}
+
+#searchs {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+#user {
+  background-color: black;
+  border: 1px solid #F1B24A;
+  color: white;
+  font-family: fantasy;
+  padding: 15px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#user:hover {
+  background-color: #F1B24A;
+  border: 1px solid #F1B24A;
+  color: black;
+}
+
+#repo {
+  background-color: #DADED4;
+  border: 1px solid #F1B24A;
+  color: black;
+  padding: 15px;
+  font-family: fantasy;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+#repo:hover {
+  background-color: black;
+  border: 1px solid #F1B24A;
+  color: white;
+}
+
+.imgs img {
+  width: 3%;
+}
+
+.cont h4 {
+  color: white;
+  text-align: right;
+}
+
+.con {
+  color: #F1B24A;
+  text-align: right;
+}
+
+.cont a {
+  margin-left: 91%;
+}
+
+.last {
+  padding-top: 20px;
+}
+
+/*responsive*/
+@media screen and (min-width: 480px) and (max-width: 767px) {}
+
+.ico img {
+  width: 80px;
+  margin-left: 32%;
+  border-radius: 50%;
+}
+
+.last {
+  margin-top: 20px;
+}
+
+.coupon {
+  border: 5px dotted #bbb;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.mylogo {
+  padding: 2px 16px;
+  background-color: #f1f1f1;
+}
+
+.mylogo h3 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 20px;
+}
+
+.mylogo h2 {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.mylogo p {
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.promo {
+  background: #ccc;
+  padding: 3px;
+}
+
+.expire {
+  color: red;
+}
+
+.icos p{
+  background-color: whitesmoke;
+  padding: 30px;
+  text-align: center;
+  border-radius: 50%;
+  width: 108px;
+  margin-left: 32%;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fa5530;
+}
