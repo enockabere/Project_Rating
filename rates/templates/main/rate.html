@@ -2,6 +2,7 @@
 {% load bootstrap5 %}
 {% load static %}
 {% block content %}
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <section class="landings">
     <div class="container">
         <div class="row">
@@ -9,6 +10,21 @@
                 <div class="brand">
                     <h3>Hypertext <span class="br"> Assassin</span></h3>
                 </div>
+            </div>
+            <div class="col-md-6">
+               <div class="menus">
+                <div class="home">
+                    <a type="button"  href="{% url 'dashboard' %}" class="btn btn-outline-info">
+                        Home
+                    </a> 
+                </div>
+                <div class="profile">
+                    <button type="button" class="btn btn-primary position-relative">
+                        <i class="far fa-user-circle"></i>
+                      </button> 
+                   <p></p>
+                </div>
+               </div>
             </div>
         </div>
         <div class="row">
@@ -115,6 +131,7 @@
                 <button id="ratesBtn" class="btn btn-outline-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     Rate Project
                   </button>
+                 
                </div>
                 <div class="collapse" id="collapseExample">
                     <form>

@@ -203,3 +203,18 @@
 #ratesBtn{
   margin-bottom: 20px;
 }
+.menus{
+  margin-top: 30px;
+}
+.home{
+  display: inline-block;
+}
+.profile{
+  display: inline-block;
+  float: right;
+}
+.profile button{
+  background-color: white;
+  color: #fa5530;
+  border-radius: 50%;
+}
