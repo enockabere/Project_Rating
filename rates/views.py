@@ -20,6 +20,15 @@ def profile(request):
         data = request.POST
         screenshot = request.FILES.get('image')
         
+        dp = request.FILES.get('image')
+        
+        profile = Profile.objects.create(
+            name = request.user,
+            profile_pic = dp,
+            bio = data['bio'],
+            contact = data['contact']
+        )
+        
         project = Project.objects.create(
             project_name = data['p-name'],
             project_owner = request.user,
@@ -27,6 +36,6 @@ def profile(request):
             description = data['description'],
             screenshot = screenshot,         
         )
-        print(project)
         return redirect('profile')
+    
     return render(request,'main/profile.html')

@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="descriptions">
-                    <h3>Your Account Dashboard</h3>
+                    <h3><span class="br" style="text-transform: capitalize;">{{user}}</span> Account Dashboard</h3>
 
                 </div>
             </div>
@@ -89,13 +89,17 @@
                         </h5>
                     </div>
                 </div>
-                <form>
+                <form method="POST", action="{% url 'profile' %}">
+                    {% csrf_token %}
                     
                     <div class="mb-3">
                         <textarea class="form-control" name="bio"  placeholder="Profile Bio..." rows="3"></textarea>
                     </div>
                     <div class="mb-3">
-                        <input class="form-control" type="file" name="screenshot">
+                        <input type="text" class="form-control" name="contact" maxlength="15" placeholder="07......">
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" type="file" name="dp">
                         <div class="form-text">Upload profile picture</div>
                     </div>
                     <button type="submit" class="btn btn-info mb-3">Submit</button>
