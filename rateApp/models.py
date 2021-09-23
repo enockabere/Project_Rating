@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from cloudinary.models import CloudinaryField
 
 #assign user model to a variable User
 User = get_user_model()
@@ -11,6 +12,7 @@ class Project(models.Model):
     project_owner = models.ForeignKey(User,on_delete=models.CASCADE,related_name='project_owner')
     project_link = models.URLField(blank=True,max_length=200)
     description = models.TextField(blank=True)
+    screenshot = CloudinaryField('image',blank=True)
     date_added = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
