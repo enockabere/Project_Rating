@@ -15,6 +15,10 @@
   height: 80vh;
   background-image: url(../images/rates/bg/2.jpg)
 }
+.landingss {
+  height: 50vh;
+  background-image: url(../images/rates/bg/2.jpg)
+}
 .brand {
   padding-top: 30px;
 }
@@ -28,8 +32,17 @@
 .description {
   margin-top: 100px
 }
-
+.descriptions {
+  margin-top: 40px
+}
 .description h3 {
+  color: white;
+  /* font-family: 'Domine', serif; */
+  font-size: 55px;
+  text-align: center;
+  font-weight: 800;
+}
+.descriptions h3 {
   color: white;
   /* font-family: 'Domine', serif; */
   font-size: 55px;
@@ -217,4 +230,15 @@
   background-color: white;
   color: #fa5530;
   border-radius: 50%;
+}
+.profile a{
+  background-color: white;
+  color: #fa5530;
+  border-radius: 50%;
+}
+.icos img{
+  width: 40%;
+  border-radius: 50%;
+  border: 2px solid white;
+  padding: 10px;
 }

@@ -21,8 +21,8 @@
         <div class="row" id="searchs">
             <div class="col-md-12 col-xs-12 col-sm-12 text-center">
                 <div id="searches" class="btn-group" role="group" aria-label="Basic example">
-                    <button class="btn btn-success" id="user" routerLink="/profile">Find/View/Rate Projects </button>
-                    <button id="repo" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Upload a Project</button>
+                    <a class="btn btn-success" href="#last" id="user" type="button" >Find/View/Rate Projects </a>
+                    <a id="repo" type="button" class="btn btn-success" href="{% url 'profile' %}">Upload a Project</a>
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
         </div>
     </div>
 </section>
-<section class="last">
+<section class="last" id="last">
     <div class="container">
         <div class="row">
             <div class="col-md-4">

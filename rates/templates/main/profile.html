@@ -2,8 +2,9 @@
 {% load bootstrap5 %}
 {% load static %}
 {% block content %}
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-<section class="landings">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<section class="landingss">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -12,91 +13,39 @@
                 </div>
             </div>
             <div class="col-md-6">
-               <div class="menus">
-                <div class="home">
-                    <a type="button"  href="{% url 'dashboard' %}" class="btn btn-outline-info">
-                        Home
-                    </a> 
+                <div class="menus">
+                    <div class="profile">
+                        <a type="button" href="{% url 'dashboard' %}" class="btn btn-primary position-relative">
+                            <i class="fas fa-home"></i>
+                        </a>
+                        <p></p>
+                    </div>
                 </div>
-                <div class="profile">
-                    <button type="button" class="btn btn-primary position-relative">
-                        <i class="far fa-user-circle"></i>
-                      </button> 
-                   <p></p>
-                </div>
-               </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="description">
-                    <h3>See Rates For this Site Below!</h3>
+                <div class="descriptions">
+                    <h3>Your Account Dashboard</h3>
+
                 </div>
             </div>
         </div>
         <div class="row" id="cards">
             <div class="col-md-3 d-flex pb-3">
-                <div class="card" id="myCard">
-                    <div class="card-body">
-                        <h5 class="card-title"><span class="material-icons-outlined">
-                                Design
-                            </span></h5>
-                        <p class="card-text">
-                            Good web design helps guide your users' eyes and tell
-                            them where you want
-                            them to look.
-                        </p>
-                        <div class="icos">
-                            <p>98%</p>
-                        </div>
-                    </div>
+                <div class="icos">
+                    <img src="../../../static/images/1.png" alt="">
                 </div>
             </div>
-            <div class="col-md-3 d-flex pb-3">
+            <div class="col-md-8 d-flex pb-3">
                 <div class="card" id="myCard">
                     <div class="card-body">
                         <h5 class="card-title"><span class="material-icons-outlined">
-                                Usability
+                                Bio
                             </span></h5>
                         <p class="card-text">
                             This can be translated to the user experience and how responsive the project is.
                         </p>
-                        <div class="icos">
-                            <p>98%</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex pb-3">
-                <div class="card" id="myCard">
-                    <div class="card-body">
-                        <h5 class="card-title"><span class="material-icons-outlined">
-                                Content
-                            </span></h5>
-                        <p class="card-text">
-                            This includes the technologies used, the font used and
-                            grammar
-                        </p>
-                        <div class="icos" style="padding-top:20px;">
-                            <p>98%</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex pb-3">
-                <div class="card" id="myCard">
-                    <div class="card-body">
-                        <h5 class="card-title"><span class="material-icons-outlined">
-                                Criteria
-                            </span></h5>
-                        <p class="card-text">
-                            Project rating and reviews are a digital version of the word-of-mouth phenomenon.
-                            A project can be rated based on , Design, Usability and Content.
-
-                        </p>
-                        <div class="ico">
-                            <img src="../../../static/images/rates/4.png" alt="" srcset="">
-                        </div>
                     </div>
                 </div>
             </div>
@@ -106,53 +55,50 @@
 <section class="about">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="start">
                     <div class="header">
                         <h5>
-                            About <span class="br">Project</span>
+                            Add <span class="br">Project</span>
                         </h5>
                     </div>
-                    <div class="header-body">
-                        <p>
-                            Any marketing that uses electronic devices to convey promotional
-                             messaging and measure its impact. In practice, digital marketing
-                             typically refers to marketing campaigns that appear on a computer,
-                              phone, tablet, or other device. It can take many forms, including 
-                              online video, display ads, and social media posts. Digital marketing 
-                              is often compared to “traditional marketing” such as magazine ads,
-                               billboards, and direct mail. Oddly, television is usually lumped in
-                                with traditional marketing. 
-                        </p>
-                       
+                </div>
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="p-name" placeholder="Enter project name">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" name="p-description"  placeholder="Project description...." rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="p-link" placeholder="Deployed url">
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" type="file" name="screenshot">
+                        <div class="form-text">Upload a screenshot of the project</div>
+                    </div>
+                    <button type="submit" class="btn btn-info mb-3">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="start">
+                    <div class="header">
+                        <h5>
+                            Profile <span class="br">Settings</span>
+                        </h5>
                     </div>
                 </div>
-               <div class="btns">
-                <button id="ratesBtn" class="btn btn-outline-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    Rate Project
-                  </button>
-                 
-               </div>
-                <div class="collapse" id="collapseExample">
-                    <form>
-                        <div class="mb-3">
-                          <label for="design" class="form-label">Design Rating</label>
-                          <input type="number" class="form-control" name="design" placeholder="Enter rating between 1-10">
-                          <div class="form-text">Rate project by entering a number between 1 and 10 where 10 is highest and 1 is lowest</div>
-                        </div>
-                        <div class="mb-3">
-                          <label for="usability" class="form-label" >Usability Rating</label>
-                          <input type="number" class="form-control" placeholder="Enter rating between 1-10" name="usability">
-                          <div class="form-text">Rate project by entering a number between 1 and 10 where 10 is highest and 1 is lowest</div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="content" class="form-label">Content Rating</label>
-                            <input type="number" class="form-control" name="content" placeholder="Enter rating between 1-10">
-                            <div  class="form-text">Rate project by entering a number between 1 and 10 where 10 is highest and 1 is lowest</div>
-                          </div>
-                        <button type="submit" class="btn btn-info mb-3">Submit</button>
-                      </form>
-                  </div>
+                <form>
+                    
+                    <div class="mb-3">
+                        <textarea class="form-control" name="bio"  placeholder="Profile Bio..." rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" type="file" name="screenshot">
+                        <div class="form-text">Upload profile picture</div>
+                    </div>
+                    <button type="submit" class="btn btn-info mb-3">Submit</button>
+                </form>
             </div>
         </div>
     </div>
