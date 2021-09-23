@@ -31,25 +31,30 @@
                 </div>
             </div>
         </div>
+        {% for profile in profile %}
         <div class="row" id="cards">
             <div class="col-md-3 d-flex pb-3">
                 <div class="icos">
-                    <img src="../../../static/images/1.png" alt="">
+                    <img src="{{profile.profile_pic.url}}" alt="profile picture">
                 </div>
             </div>
             <div class="col-md-8 d-flex pb-3">
                 <div class="card" id="myCard">
+                    
                     <div class="card-body">
                         <h5 class="card-title"><span class="material-icons-outlined">
                                 Bio
                             </span></h5>
                         <p class="card-text">
-                            This can be translated to the user experience and how responsive the project is.
+                            {{profile.bio}}
                         </p>
+                        <small>{{profile.contact}}</small>
                     </div>
+                    
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
 </section>
 <section class="about">

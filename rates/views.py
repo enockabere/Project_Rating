@@ -11,7 +11,9 @@ def dashboard(request):
     ctx = {'project':project}
     return render(request,'main/dashboard.html', ctx)
 @login_required(login_url='accounts/login/')
-def ratings(request,id):
+def ratings(request,pk):
+    project = Project.objects.get(id=pk)
+    ctx = {'project':project}
     #  project = Project.objects.create(
     #         project_name = data['p-name'],
     #         project_owner = request.user,
@@ -20,7 +22,7 @@ def ratings(request,id):
     #         screenshot = screenshot, 
                                
     #     )
-    return render(request,'main/rate.html')
+    return render(request,'main/rate.html',ctx)
 @login_required(login_url='accounts/login/')
 def profile(request):
     
@@ -33,12 +35,13 @@ def profile(request):
             project_owner = request.user,
             project_link = data ['p-link'],
             description = data['description'],
-            screenshot = screenshot, 
+            image = screenshot, 
                                
         )
         return redirect('profile')
     current = request.user.pk
-    profile = Profile.objects.filter(user=current).all()
+    profile = Profile.objects.filter(name=current).all()
+    print(profile)
     ctx={'profile':profile}
     return render(request,'main/profile.html',ctx)
 @login_required(login_url='accounts/login/')
@@ -52,7 +55,7 @@ def bio(request):
             bio = data['bio'],
             name = request.user,
             contact = data['contact'],
-            profile_pic = dp, 
+            image = dp, 
                                
         )
         return redirect('profile')
