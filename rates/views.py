@@ -11,7 +11,15 @@ def dashboard(request):
     ctx = {'project':project}
     return render(request,'main/dashboard.html', ctx)
 @login_required(login_url='accounts/login/')
-def ratings(request):
+def ratings(request,id):
+    #  project = Project.objects.create(
+    #         project_name = data['p-name'],
+    #         project_owner = request.user,
+    #         project_link = data ['p-link'],
+    #         project = request.get[id],
+    #         screenshot = screenshot, 
+                               
+    #     )
     return render(request,'main/rate.html')
 @login_required(login_url='accounts/login/')
 def profile(request):
@@ -19,23 +27,32 @@ def profile(request):
     if request.method == 'POST':
         data = request.POST
         screenshot = request.FILES.get('image')
-        
-        dp = request.FILES.get('image')
-        
-        profile = Profile.objects.create(
-            name = request.user,
-            profile_pic = dp,
-            bio = data['bio'],
-            contact = data['contact']
-        )
-        
+                       
         project = Project.objects.create(
             project_name = data['p-name'],
             project_owner = request.user,
             project_link = data ['p-link'],
             description = data['description'],
-            screenshot = screenshot,         
+            screenshot = screenshot, 
+                               
         )
         return redirect('profile')
+    current = request.user.pk
+    profile = Profile.objects.filter(user=current).all()
+    ctx={'profile':profile}
+    return render(request,'main/profile.html',ctx)
+@login_required(login_url='accounts/login/')
+def bio(request):
     
-    return render(request,'main/profile.html')
+    if request.method == 'POST':
+        data = request.POST
+        dp = request.FILES.get('dp')
+                       
+        bio = Profile.objects.create(
+            bio = data['bio'],
+            name = request.user,
+            contact = data['contact'],
+            profile_pic = dp, 
+                               
+        )
+        return redirect('profile')
