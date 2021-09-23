@@ -63,18 +63,19 @@
                         </h5>
                     </div>
                 </div>
-                <form>
+                <form method="POST", action="{% url 'profile' %}">
+                    {% csrf_token %}
                     <div class="mb-3">
                         <input type="text" class="form-control" name="p-name" placeholder="Enter project name">
                     </div>
                     <div class="mb-3">
-                        <textarea class="form-control" name="p-description"  placeholder="Project description...." rows="3"></textarea>
+                        <textarea class="form-control" name="description"  placeholder="Project description...." rows="3"></textarea>
                     </div>
                     <div class="mb-3">
                         <input type="text" class="form-control" name="p-link" placeholder="Deployed url">
                     </div>
                     <div class="mb-3">
-                        <input class="form-control" type="file" name="screenshot">
+                        <input class="form-control" type="file" name="image">
                         <div class="form-text">Upload a screenshot of the project</div>
                     </div>
                     <button type="submit" class="btn btn-info mb-3">Submit</button>
@@ -103,5 +104,4 @@
         </div>
     </div>
 </section>
-
 {% endblock %}
