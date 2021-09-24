@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="brand">
-                    <h3>Hypertext <span class="br"> Assassin</span></h3>
+                    <h3>Project <span class="br"> Ratings</span></h3>
                 </div>
             </div>
             <div class="col-md-6">
@@ -35,35 +35,38 @@
         <div class="row" id="cards">
             <div class="col-md-5 d-flex pb-3">
                 <div class="icos" style="display: inline-block;">
-                    <img src="{{profile.profile_pic.url}}" alt="profile picture">
+                    <img src="https://res.cloudinary.com/enock/{{profile.image}}" alt="profile picture">
                 </div>
-                <p class="card-text" style="display: inline-block;">
+                <p class="card-text" style="display: inline-block; font-size: small">
                     {{profile.bio}} <br>
 
-                    <span class="br"><i class="fa fa-phone" aria-hidden="true"></i></span> <small>{{profile.contact}}</small>
+                    <span class="br"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <strong class="my-4">{{profile.contact}}</strong>
                 </p>
             </div>
         </div>
         {% endfor %}
     </div>
 </section>
-<section class="about pb-4" >
+<section class="about pb-4">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="start">
                     <div class="header my-4">
-                        <button type="button" class="btn btn-outline-info" data-bs-toggle="collapse" data-bs-target="#collapseExamples">Add <span class="br">Project</span></button>
+                        <button type="button" class="btn btn-outline-info" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExamples">Add <span class="br">Project</span></button>
                     </div>
                 </div>
                 <div class="edits collapse" id="collapseExamples">
-                    <form method="POST", action="{% url 'profile' %}" enctype="multipart/form-data">
+                    <form method="POST" , action="{% url 'profile' %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="mb-3">
                             <input type="text" class="form-control" name="p-name" placeholder="Enter project name">
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" name="description"  placeholder="Project description...." rows="3"></textarea>
+                            <textarea class="form-control" name="description" placeholder="Project description...."
+                                rows="3"></textarea>
                         </div>
                         <div class="mb-3">
                             <input type="text" class="form-control" name="p-link" placeholder="Deployed url">
@@ -77,23 +80,25 @@
                 </div>
             </div>
         </div>
-            <div class="row">
+        <div class="row">
             <div class="col-md-12">
                 {% if profile %}
                 <div class="start">
                     <div class="header my-4">
-                        <button type="button" class="btn btn-outline-info" data-bs-toggle="collapse" data-bs-target="#collapseExampless">Edit <span class="br">Profile</span></button>
+                        <button type="button" class="btn btn-outline-info" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExampless">Edit <span class="br">Profile</span></button>
                     </div>
                 </div>
                 <div class="edits collapse" id="collapseExampless">
-                    <form method="POST", action="{% url 'bio_update' %}" enctype="multipart/form-data">
+                    <form method="POST" , action="{% url 'bio_update' %}" enctype="multipart/form-data">
                         {% csrf_token %}
-                        
+
                         <div class="mb-3">
-                            <textarea class="form-control" name="bios"  placeholder="Profile Bio..." rows="3"></textarea>
+                            <textarea class="form-control" name="bios" placeholder="Profile Bio..." rows="3"></textarea>
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" name="contacts" maxlength="15" placeholder="07......">
+                            <input type="text" class="form-control" name="contacts" maxlength="15"
+                                placeholder="07......">
                         </div>
                         <div class="mb-3">
                             <input class="form-control" type="file" name="dps">
@@ -105,18 +110,20 @@
                 {% else %}
                 <div class="start">
                     <div class="header my-4">
-                        <button type="button" class="btn btn-outline-info" data-bs-toggle="collapse" data-bs-target="#collapseExample">Profile <span class="br"> Settings</span></button>
+                        <button type="button" class="btn btn-outline-info" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExample">Profile <span class="br"> Settings</span></button>
                     </div>
                 </div>
                 <div class="edits collapse" id="collapseExample">
-                    <form method="POST", action="{% url 'mybio' %}" enctype="multipart/form-data">
+                    <form method="POST" , action="{% url 'mybio' %}" enctype="multipart/form-data">
                         {% csrf_token %}
-                        
+
                         <div class="mb-3">
-                            <textarea class="form-control" name="bio"  placeholder="Profile Bio..." rows="3"></textarea>
+                            <textarea class="form-control" name="bio" placeholder="Profile Bio..." rows="3"></textarea>
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" name="contact" maxlength="15" placeholder="07......">
+                            <input type="text" class="form-control" name="contact" maxlength="15"
+                                placeholder="07......">
                         </div>
                         <div class="mb-3">
                             <input class="form-control" type="file" name="dp">
@@ -128,7 +135,7 @@
                 {% endif %}
             </div>
         </div>
-        </div>
+    </div>
 </section>
 <section class="last" id="last">
     <div class="container">

@@ -62,7 +62,7 @@
                         <p class="card-text">
                             This can be translated to the user experience and how responsive the project is.
                         </p>
-                        <div class="icos">
+                        <div class="icos" style="margin-top:40px;">
                             <p>{{usability}}%</p>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                             This includes the technologies used, the font used and
                             grammar
                         </p>
-                        <div class="icos" style="padding-top:0px;">
+                        <div class="icos" style="margin-top:40px;">
                             <p>{{content}}%</p>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
 <section class="about">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8">
                 <div class="start">
                     <div class="header">
                         <h5>
@@ -135,6 +135,11 @@
                         Rate Project
                     </button>
 
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="img">
+                    <img src="https://res.cloudinary.com/enock/{{project.image}}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
@@ -200,4 +205,5 @@
         </div>
     </div>
 </div>
+
 {% endblock %}

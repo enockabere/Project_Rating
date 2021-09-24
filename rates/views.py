@@ -13,6 +13,7 @@ def dashboard(request):
 @login_required(login_url='accounts/login/')
 def ratings(request,pk):
     project = Project.objects.get(id=pk)
+
     rating = Rating.objects.filter(project=project)
     design = []
     usability=[]
@@ -25,10 +26,13 @@ def ratings(request,pk):
         design_avg= int((sum(design)/len(rating)*100)/10)
         usability_avg= int((sum(usability)/len(rating)*100)/10)
         content_avg= int((sum(content)/len(rating)*100)/10)
+        
+    
     else:
         design_avg = 0
         usability_avg = 0
         content_avg = 0
+        
     
     ctx = {'project':project,"design":design_avg,"usability":usability_avg,"content":content_avg}
     if request.method == 'POST':
