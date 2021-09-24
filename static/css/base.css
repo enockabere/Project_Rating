@@ -8,7 +8,7 @@
 }
 
 .landing {
-  height: 100vh;
+  height: 120vh;
   background-image: url(../images/rates/bg/2.jpg)
 }
 .landings {
@@ -30,7 +30,7 @@
 }
 
 .description {
-  margin-top: 100px
+  margin-top: 70px;
 }
 .descriptions {
   margin-top: 40px
@@ -246,4 +246,13 @@
   border-radius: 50%;
   border: 2px solid white;
   padding: 10px;
+}
+@media only screen and (max-device-width: 780px) {
+  .landing{
+    height:auto;
+  }
+  #cards {
+      height:auto;
+      position:relative;
+  }
 }
