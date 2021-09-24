@@ -60,8 +60,8 @@ def profile(request):
         return redirect('profile')
     current = request.user.pk
     profile = Profile.objects.filter(name=current).all()
-    print(profile)
-    ctx={'profile':profile}
+    project = Project.objects.filter(project_owner=current).all()
+    ctx={'profile':profile,'project':project}
     return render(request,'main/profile.html',ctx)
 @login_required(login_url='accounts/login/')
 def bio(request):
@@ -83,12 +83,11 @@ def bio_update(request):
     
     if request.method == 'POST':
         data = request.POST
-        dp = request.FILES.get('dp')
+        dp = request.FILES.get('dps')
                        
         bio = Profile.objects.filter(name=request.user).update(
-            bio = data['bio'],
-            name = request.user,
-            contact = data['contact'],
+            bio = data['bios'],
+            contact = data['contacts'],
             image = dp, 
                                
         )

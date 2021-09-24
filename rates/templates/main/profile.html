@@ -33,82 +33,143 @@
         </div>
         {% for profile in profile %}
         <div class="row" id="cards">
-            <div class="col-md-3 d-flex pb-3">
-                <div class="icos">
+            <div class="col-md-5 d-flex pb-3">
+                <div class="icos" style="display: inline-block;">
                     <img src="{{profile.profile_pic.url}}" alt="profile picture">
                 </div>
-            </div>
-            <div class="col-md-8 d-flex pb-3">
-                <div class="card" id="myCard">
-                    
-                    <div class="card-body">
-                        <h5 class="card-title"><span class="material-icons-outlined">
-                                Bio
-                            </span></h5>
-                        <p class="card-text">
-                            {{profile.bio}}
-                        </p>
-                        <small>{{profile.contact}}</small>
-                    </div>
-                    
-                </div>
+                <p class="card-text" style="display: inline-block;">
+                    {{profile.bio}} <br>
+
+                    <span class="br"><i class="fa fa-phone" aria-hidden="true"></i></span> <small>{{profile.contact}}</small>
+                </p>
             </div>
         </div>
         {% endfor %}
     </div>
 </section>
-<section class="about">
+<section class="about pb-4" >
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="start">
-                    <div class="header">
-                        <h5>
-                            Add <span class="br">Project</span>
-                        </h5>
+                    <div class="header my-4">
+                        <button type="button" class="btn btn-outline-info" data-bs-toggle="collapse" data-bs-target="#collapseExamples">Add <span class="br">Project</span></button>
                     </div>
                 </div>
-                <form method="POST", action="{% url 'profile' %}" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    <div class="mb-3">
-                        <input type="text" class="form-control" name="p-name" placeholder="Enter project name">
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control" name="description"  placeholder="Project description...." rows="3"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" name="p-link" placeholder="Deployed url">
-                    </div>
-                    <div class="mb-3">
-                        <input class="form-control" type="file" name="image">
-                        <div class="form-text">Upload a screenshot of the project</div>
-                    </div>
-                    <button type="submit" class="btn btn-info mb-3">Submit</button>
-                </form>
+                <div class="edits collapse" id="collapseExamples">
+                    <form method="POST", action="{% url 'profile' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="p-name" placeholder="Enter project name">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="description"  placeholder="Project description...." rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="p-link" placeholder="Deployed url">
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control" type="file" name="image">
+                            <div class="form-text">Upload a screenshot of the project</div>
+                        </div>
+                        <button type="submit" class="btn btn-info mb-3">Submit</button>
+                    </form>
+                </div>
             </div>
-            <div class="col-md-6">
+        </div>
+            <div class="row">
+            <div class="col-md-12">
+                {% if profile %}
                 <div class="start">
-                    <div class="header">
-                        <h5>
-                            Profile <span class="br">Settings</span>
-                        </h5>
+                    <div class="header my-4">
+                        <button type="button" class="btn btn-outline-info" data-bs-toggle="collapse" data-bs-target="#collapseExampless">Edit <span class="br">Profile</span></button>
                     </div>
                 </div>
-                <form method="POST", action="{% url 'mybio' %}" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    
-                    <div class="mb-3">
-                        <textarea class="form-control" name="bio"  placeholder="Profile Bio..." rows="3"></textarea>
+                <div class="edits collapse" id="collapseExampless">
+                    <form method="POST", action="{% url 'bio_update' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        <div class="mb-3">
+                            <textarea class="form-control" name="bios"  placeholder="Profile Bio..." rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="contacts" maxlength="15" placeholder="07......">
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control" type="file" name="dps">
+                            <div class="form-text">Upload profile picture</div>
+                        </div>
+                        <button type="submit" class="btn btn-info mb-3">Submit</button>
+                    </form>
+                </div>
+                {% else %}
+                <div class="start">
+                    <div class="header my-4">
+                        <button type="button" class="btn btn-outline-info" data-bs-toggle="collapse" data-bs-target="#collapseExample">Profile <span class="br"> Settings</span></button>
                     </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" name="contact" maxlength="15" placeholder="07......">
+                </div>
+                <div class="edits collapse" id="collapseExample">
+                    <form method="POST", action="{% url 'mybio' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        <div class="mb-3">
+                            <textarea class="form-control" name="bio"  placeholder="Profile Bio..." rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="contact" maxlength="15" placeholder="07......">
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control" type="file" name="dp">
+                            <div class="form-text">Upload profile picture</div>
+                        </div>
+                        <button type="submit" class="btn btn-info mb-3">Submit</button>
+                    </form>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        </div>
+</section>
+<section class="last" id="last">
+    <div class="container">
+        <div class="row">
+            {% for project in project %}
+            <div class="col-md-4" style="display: flex;">
+                <div class="coupon my-2" style="width: 100%;">
+                    <div class="mylogo">
+                        <h3>{{project.project_owner}}</h3>
                     </div>
-                    <div class="mb-3">
-                        <input class="form-control" type="file" name="dp">
-                        <div class="form-text">Upload profile picture</div>
+                    {% if project.image %}
+                    <img src="https://res.cloudinary.com/enock/{{project.image}}" alt="Avatar" style="width:100%;">
+                    {% endif %}
+                    <div class="mylogo" style="background-color:white">
+                        <h2><b>{{project.project_name}}</b></h2>
+                        <p>{{project.description}}</p>
                     </div>
-                    <button type="submit" class="btn btn-info mb-3">Submit</button>
-                </form>
+                    <div class="mylogo">
+                        <p class="expire">Published: <span style="color: black;">{{project.date_added}}</span></p>
+                        <a type='button' class="btn btn-outline-info btn-sm" href="{% url 'rates' project.id %}">Rate
+                            Project</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="logo">
+                    <img src="../../assets/logo/1.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="copy">
+                    <p style="text-align: center; color:white;"><i class="fa fa-copyright" aria-hidden="true"></i>
+                        hypertextassassin</p>
+                </div>
             </div>
         </div>
     </div>

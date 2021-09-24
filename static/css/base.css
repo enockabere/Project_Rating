@@ -20,7 +20,8 @@
 }
 
 .landingss {
-  height: 50vh;
+  height: auto;
+  padding-bottom: 20px;
   background-image: url(../images/rates/bg/2.jpg)
 }
 
@@ -89,8 +90,9 @@
 }
 
 .card-text {
-  text-align: center;
+  text-align: left;
   color: white;
+  padding: 10px
 }
 
 #searchs {
@@ -308,4 +310,9 @@
 }
 .cont{
   color:#5252d4;
+}
+.edits{
+  background-color: #a0d2eb;
+  padding: 10px;
+  border-radius: 8px;
 }
