@@ -8,12 +8,12 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="brand">
-                    <h3>Hypertext <span class="br"> Assassin</span></h3>
+                    <h3>Published By: <span class="br"> {{project.project_owner}}</span></h3>
                 </div>
             </div>
             <div class="col-md-6">
                <div class="menus">
-                <div class="home">
+                <div class="home" style="float:right;padding-left: 10px;">
                     <a type="button"  href="{% url 'dashboard' %}" class="btn btn-outline-info">
                         Home
                     </a> 
@@ -47,7 +47,7 @@
                             them to look.
                         </p>
                         <div class="icos">
-                            <p>98%</p>
+                            <p>{{design_average}}</p>
                         </div>
                     </div>
                 </div>
@@ -110,19 +110,12 @@
                 <div class="start">
                     <div class="header">
                         <h5>
-                            About <span class="br">Project</span>
+                            About <span class="br">{{project.project_name}}</span>
                         </h5>
                     </div>
                     <div class="header-body">
                         <p>
-                            Any marketing that uses electronic devices to convey promotional
-                             messaging and measure its impact. In practice, digital marketing
-                             typically refers to marketing campaigns that appear on a computer,
-                              phone, tablet, or other device. It can take many forms, including 
-                              online video, display ads, and social media posts. Digital marketing 
-                              is often compared to “traditional marketing” such as magazine ads,
-                               billboards, and direct mail. Oddly, television is usually lumped in
-                                with traditional marketing. 
+                            {{project.description}}
                         </p>
                        
                     </div>
@@ -134,7 +127,8 @@
                  
                </div>
                 <div class="collapse" id="collapseExample">
-                    <form>
+                    <form method="POST", action="{% url 'rates' project.id %}">
+                        {% csrf_token %}
                         <div class="mb-3">
                           <label for="design" class="form-label">Design Rating</label>
                           <input type="number" class="form-control" name="design" placeholder="Enter rating between 1-10">

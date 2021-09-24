@@ -106,7 +106,9 @@
                         <div class="mylogo">
                           <h3>{{project.project_owner}}</h3>
                         </div>
-                        <img src="{{poject.project_link}}" alt="Avatar" style="width:100%;">
+                        {% if project.image %}
+                        <img src="https://res.cloudinary.com/enock/{{project.image}}" alt="Avatar" style="width:100%;">
+                        {% endif %}
                         <div class="mylogo" style="background-color:white">
                           <h2><b>{{project.project_name}}</b></h2> 
                           <p>{{project.description}}</p>

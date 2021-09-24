@@ -68,7 +68,7 @@
                         </h5>
                     </div>
                 </div>
-                <form method="POST", action="{% url 'profile' %}">
+                <form method="POST", action="{% url 'profile' %}" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="mb-3">
                         <input type="text" class="form-control" name="p-name" placeholder="Enter project name">
@@ -94,7 +94,7 @@
                         </h5>
                     </div>
                 </div>
-                <form method="POST", action="{% url 'mybio' %}">
+                <form method="POST", action="{% url 'mybio' %}" enctype="multipart/form-data">
                     {% csrf_token %}
                     
                     <div class="mb-3">

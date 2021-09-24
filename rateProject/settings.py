@@ -45,14 +45,17 @@ INSTALLED_APPS = [
     'rateApp',
     'bootstrap5',
     'rest_framework',
+    'rest_framework.authtoken',
     'accounts',
-    'knox',
     'crispy_forms',
     'rates',
     'cloudinary',
 ]
+
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES':('knox.auth.TokenAuthentication',)
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
 }
 cloudinary.config( 
   cloud_name = "enock", 

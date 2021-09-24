@@ -13,15 +13,29 @@ def dashboard(request):
 @login_required(login_url='accounts/login/')
 def ratings(request,pk):
     project = Project.objects.get(id=pk)
-    ctx = {'project':project}
-    #  project = Project.objects.create(
-    #         project_name = data['p-name'],
-    #         project_owner = request.user,
-    #         project_link = data ['p-link'],
-    #         project = request.get[id],
-    #         screenshot = screenshot, 
-                               
-    #     )
+    rating = Rating.objects.filter(project=project)
+    design = []
+    usability=[]
+    content = []
+    for i in rating:
+        design.append(i.design)
+        usability.append(i.usability)
+        content.append(i.content)
+    design_avg= sum(design)/len(rating)
+    usability_avg= sum(usability)/len(rating)
+    content_avg= sum(content)/len(rating)
+    
+    ctx = {'project':project,"design_average":design_avg}
+    if request.method == 'POST':
+        data = request.POST
+        rates = Rating.objects.create(
+            design = data['design'],
+            usability = data['usability'],
+            content =data['content'],
+            rated_by = request.user,
+            project= project
+        )
+            
     return render(request,'main/rate.html',ctx)
 @login_required(login_url='accounts/login/')
 def profile(request):
@@ -52,6 +66,21 @@ def bio(request):
         dp = request.FILES.get('dp')
                        
         bio = Profile.objects.create(
+            bio = data['bio'],
+            name = request.user,
+            contact = data['contact'],
+            image = dp, 
+                               
+        )
+        return redirect('profile')
+@login_required(login_url='accounts/login/')
+def bio_update(request):
+    
+    if request.method == 'POST':
+        data = request.POST
+        dp = request.FILES.get('dp')
+                       
+        bio = Profile.objects.filter(name=request.user).update(
             bio = data['bio'],
             name = request.user,
             contact = data['contact'],
