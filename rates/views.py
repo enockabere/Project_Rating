@@ -17,15 +17,20 @@ def ratings(request,pk):
     design = []
     usability=[]
     content = []
-    for i in rating:
-        design.append(i.design)
-        usability.append(i.usability)
-        content.append(i.content)
-    design_avg= sum(design)/len(rating)
-    usability_avg= sum(usability)/len(rating)
-    content_avg= sum(content)/len(rating)
+    if len(rating)> 0:
+        for i in rating:
+            design.append(i.design)
+            usability.append(i.usability)
+            content.append(i.content)
+        design_avg= int((sum(design)/len(rating)*100)/10)
+        usability_avg= int((sum(usability)/len(rating)*100)/10)
+        content_avg= int((sum(content)/len(rating)*100)/10)
+    else:
+        design_avg = 0
+        usability_avg = 0
+        content_avg = 0
     
-    ctx = {'project':project,"design_average":design_avg}
+    ctx = {'project':project,"design":design_avg,"usability":usability_avg,"content":content_avg}
     if request.method == 'POST':
         data = request.POST
         rates = Rating.objects.create(

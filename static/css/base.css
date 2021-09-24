@@ -8,17 +8,22 @@
 }
 
 .landing {
-  height: 120vh;
+  height: auto;
+  padding-bottom: 40px;
   background-image: url(../images/rates/bg/2.jpg)
 }
+
 .landings {
-  height: 80vh;
+  height: auto;
+  padding-bottom: 40px;
   background-image: url(../images/rates/bg/2.jpg)
 }
+
 .landingss {
   height: 50vh;
   background-image: url(../images/rates/bg/2.jpg)
 }
+
 .brand {
   padding-top: 30px;
 }
@@ -32,9 +37,11 @@
 .description {
   margin-top: 70px;
 }
+
 .descriptions {
   margin-top: 40px
 }
+
 .description h3 {
   color: white;
   /* font-family: 'Domine', serif; */
@@ -42,6 +49,7 @@
   text-align: center;
   font-weight: 800;
 }
+
 .descriptions h3 {
   color: white;
   /* font-family: 'Domine', serif; */
@@ -140,10 +148,6 @@
   margin-left: 91%;
 }
 
-.last {
-  padding-top: 20px;
-}
-
 /*responsive*/
 @media screen and (min-width: 480px) and (max-width: 767px) {}
 
@@ -154,23 +158,31 @@
 }
 
 .last {
-  margin-top: 20px;
+  padding-top: 30px;
   padding-bottom: 30px;
+  background: #ECE9E6;
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 }
 
 .coupon {
-  border: 5px dotted #bbb;
+  border: 5px dotted #fa5530;
   border-radius: 15px;
   margin: 0 auto;
+  padding: 5px;
 }
+
 .coupon:hover {
   border: 5px solid #bbb;
   border-radius: 15px;
   margin: 0 auto;
 }
+.coupon img {
+  border-radius: 5px;
+}
 .mylogo {
   padding: 2px 16px;
-  background-color: #f1f1f1;
+  background-color: #F0F3F4;
 }
 
 .mylogo h3 {
@@ -197,62 +209,103 @@
   color: red;
 }
 
-.icos p{
+.icos p {
   background-color: whitesmoke;
   padding: 30px;
   text-align: center;
   border-radius: 50%;
-  width: 108px;
+  width: 112px;
   margin-left: 32%;
   font-size: 22px;
   font-weight: bold;
   color: #fa5530;
 }
-.about{
+
+.about {
   margin-top: 30px;
-  background-color: #F0F3F4 ;
+  background-color: #F0F3F4;
 }
-.header h5{
+
+.header h5 {
   font-family: 'Chakra Petch', sans-serif;
   font-weight: 700;
   font-size: 25px;
   padding-bottom: 30px;
 }
-#ratesBtn{
+
+#ratesBtn {
   margin-bottom: 20px;
 }
-.menus{
+
+.menus {
   margin-top: 30px;
 }
-.home{
+
+.home {
   display: inline-block;
 }
-.profile{
+
+.profile {
   display: inline-block;
   float: right;
 }
-.profile button{
+
+.profile button {
   background-color: white;
   color: #fa5530;
   border-radius: 50%;
 }
-.profile a{
+
+.profile a {
   background-color: white;
   color: #fa5530;
   border-radius: 50%;
 }
-.icos img{
+
+.icos img {
   width: 40%;
   border-radius: 50%;
   border: 2px solid white;
   padding: 10px;
 }
+
 @media only screen and (max-device-width: 780px) {
-  .landing{
-    height:auto;
+  .landing {
+    height: auto;
+  }
+  .landings {
+    height: auto;
   }
   #cards {
-      height:auto;
-      position:relative;
+    height: auto;
+    position: relative;
   }
+}
+
+#footer{
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  background-color: #34495E ;
+}
+.logo img{
+  max-width: 60%;
+  max-height: 50px;
+  border-radius: 50%;
+  padding: 5px;
+}
+.copy p{
+  text-align: right;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 15px;
+  font-size: 12px;
+}
+.contacts p{
+  color: #3C1874;
+  font-weight: 600;
+  text-align: right;
+  padding-top: 15px;
+}
+.cont{
+  color:#5252d4;
 }
