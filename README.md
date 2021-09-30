@@ -8,7 +8,7 @@ pplication rating platform for software developers.
 ![views](static/images/2.png)
 
 ### Live link
-Visit the application on https://enock-insta.herokuapp.com/
+Visit the application on enock-rating.herokuapp.com/
 ### Setup & Run Instructions
 - Create and activate a virtual environment
 - Install the dependencies listed in the requirements.txt
